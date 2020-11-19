@@ -1,0 +1,27 @@
+<h1>Detalles del Empleado</h1>
+<div>
+    <table class="table table-info table-hover">
+        <thead>
+            <tr>
+                <th>Id Empleado</th>
+                <th>Apellido</th>
+                <th>Funcion</th>
+                <th>Turno</th>
+                <th>Salario</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{detalle.idEmpleado}}</td>
+                <td>{{detalle.apellido}}</td>
+                <td>{{detalle.funcion}}</td>
+                <td>{{detalle.turno}}</td>
+                <td>{{detalle.salario}}</td>
+                <a [routerLink]="['/']" class="btn btn-success">
+                    Home
+                </a>
+            </tr>
+        </tbody>
+    </table>
+</div>

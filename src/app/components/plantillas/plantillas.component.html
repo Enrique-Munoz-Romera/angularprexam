@@ -1,0 +1,32 @@
+<!-- <h1>Plantilla</h1> -->
+<div *ngIf="plantillas.length > 0">
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>Id Empleado</th>
+                <th>Apellido</th>
+                <th>Funcion</th>
+                <th>Turno</th>
+                <th>Salario</th>
+                <th></th>
+             </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let team of plantillas">
+                <td>{{team.idEmpleado}}</td>
+                <td>{{team.apellido}}</td>
+                <td>{{team.funcion}}</td>
+                <td>{{team.turno}}</td>
+                <td>{{team.salario}}</td>
+                <a [routerLink]="['/details',team.idEmpleado]"
+                class="btn btn-info">
+                    Details
+                </a>
+                <a [routerLink]="['/update',team.idEmpleado,team.funcion]"
+                class = "btn btn-warning">
+                    Modificar
+                </a>
+            </tr>
+        </tbody>
+    </table>
+</div>
